@@ -7,8 +7,8 @@ os.system("mkdir "+domain)
 os.system("subfinder -d  "+domain+" | httpx > "+domain+"/subf-tmp.txt")
 
 os.system("cat "+domain+"/subf-tmp.txt | gauplus > "+domain+"/all_domain-gauplus.txt")
-#os.system("echo '"+domain+"'| httpx|katana > "+domain+"/katana-tmp.txt")
-os.system("echo "+domain+"| katana > "+domain+"/katana-tmp.txt") 
+
+os.system("echo "+domain+"| httpx|katana > "+domain+"/katana-tmp.txt") 
 
 os.system("cat "+domain+"/all_domain-gauplus.txt "+domain+"/katana-tmp.txt | grep -Ev ':80|embed|4|5|6|7|8|9'|slicepathsurl > "+domain+"/urls_slice.txt")
 
