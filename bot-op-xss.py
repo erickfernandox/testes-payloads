@@ -9,15 +9,16 @@ parser.add_argument("-l", "--lista", help="Caminho da Lista")
 args = parser.parse_args()
 path = args.lista
 
+os.system("mkdir "+domain)
+
 # Lê o arquivo e armazena cada linha em uma lista
 with open(path, "r") as file:
     lista = file.readlines()
 
 # Imprime cada elemento da lista em um loop
 for url in lista:
-    os.system("mkdir "+domain)
 
-    os.system("subfinder -d  "+url+" | httpx > "+domain+"/subf-tmp.txt")
+    os.system("echo '"+url+"' > "+domain+"/subf-tmp.txt")
 
     os.system("cat "+domain+"/subf-tmp.txt | gauplus > "+domain+"/all_domain-gauplus.txt")
 
