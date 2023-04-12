@@ -21,5 +21,3 @@ os.system("cat "+domain+"/urls_slice.txt | nuclei -t  multiples-swagger-xss-inde
 os.system("cat "+domain+"/urls_slice.txt | httpx -title | grep 'Index of' > indexof.txt")
 
 os.system("cat "+domain+"/urls_slice.txt | nuclei -tags traversal > traversal.txt")
-
-os.system("cat "+domain+"/urls_slice.txt | nuclei -tags traversal > traversal.txt")
