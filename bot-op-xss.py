@@ -25,7 +25,7 @@ for url in lista:
     os.system("cat "+domain+"/subf-tmp.txt |katana > "+domain+"/katana-tmp.txt") 
 
     #Executa o SlicePathsURL pra cortar os URLS
-    os.system("cat "+domain+"/all_domain-gauplus.txt "+domain+"/katana-tmp.txt |slicepathsurl |grep -Ev '4|5|6|7|8|9' > "+domain+"/urls_slice.txt")
+    os.system("cat "+domain+"/all_domain-gauplus.txt "+domain+"/katana-tmp.txt |slicepathsurl |grep -Ev '4|5|6|7|8|9'|httpx > "+domain+"/urls_slice.txt")
 
     if url.startswith("https://"):
         url = url.replace("https://", "", 1)
