@@ -33,10 +33,10 @@ for url in lista:
         url = url.replace("http://", "", 1)
 
     #Open Redirect
-    os.system("cat "+domain+"/urls_slice.txt | nuclei -t /root/nuclei-templates/cves/2022/CVE-2022-28923.yaml -t /root/nuclei-templates/vulnerabilities/generic/open-redirect.yaml -c 75 > "+domain+"/"+url+"_openredirect.txt")
+    os.system("cat "+domain+"/urls_slice.txt | nuclei -t /root/nuclei-templates/cves/2022/CVE-2022-28923.yaml -t /root/nuclei-templates/vulnerabilities/generic/open-redirect.yaml -c 75 > "+domain+"/openredirect.txt_"+url)
 
     #Git e CRLF Injection
-    os.system("cat "+domain+"/urls_slice.txt | nuclei -tags git,crlf -c 75 > "+domain+"/"+url+"_git-crlf.txt")
+    os.system("cat "+domain+"/urls_slice.txt | nuclei -tags git,crlf -c 75 > "+domain+"/git-crlf.txt_"+url)
 
     #Swagger XSS
-    os.system("cat "+domain+"/urls_slice.txt | nuclei -t  multiples-swagger-xss-indentify.yaml -c 75 > "+domain+"/"+url+"_swagger-xss.txt")
+    os.system("cat "+domain+"/urls_slice.txt | nuclei -t  multiples-swagger-xss-indentify.yaml -c 75 > "+domain+"/swagger-xss.txt_"+url)
