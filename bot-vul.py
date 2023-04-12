@@ -10,7 +10,7 @@ os.system("cat "+domain+"/subf-tmp.txt | gauplus > "+domain+"/all_domain-gauplus
 
 os.system("echo "+domain+"| httpx|katana > "+domain+"/katana-tmp.txt") 
 
-os.system("cat "+domain+"/all_domain-gauplus.txt "+domain+"/katana-tmp.txt | grep -Ev ':80|embed|4|5|6|7|8|9'|slicepathsurl > "+domain+"/urls_slice.txt")
+os.system("cat "+domain+"/all_domain-gauplus.txt "+domain+"/katana-tmp.txt | grep -Ev ':80|embed'|slicepathsurl |grep -Ev '4|5|6|7|8|9' > "+domain+"/urls_slice.txt")
 
 os.system("cat "+domain+"/urls_slice.txt | nuclei -t /root/nuclei-templates/cves/2022/CVE-2022-28923.yaml -t /root/nuclei-templates/vulnerabilities/generic/open-redirect.yaml > openredirect.txt")
 
