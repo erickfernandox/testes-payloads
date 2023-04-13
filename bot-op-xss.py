@@ -18,7 +18,7 @@ with open(path, "r") as file:
 # Imprime cada elemento da lista em um loop
 for url in lista:
 
-    os.system("echo '"+url+"' > "+domain+"/subf-tmp.txt")
+    os.system("echo '"+url+"'|httpx > "+domain+"/subf-tmp.txt")
 
     os.system("cat "+domain+"/subf-tmp.txt | gauplus > "+domain+"/all_domain-gauplus.txt")
 
