@@ -25,7 +25,7 @@ for url in lista:
     os.system("cat "+domain+"/subf-tmp.txt |katana > "+domain+"/katana-tmp.txt") 
 
     #Executa o SlicePathsURL pra cortar os URLS
-    os.system("cat "+domain+"/all_domain-gauplus.txt "+domain+"/katana-tmp.txt |slicepathsurl |grep -Ev '4|5|6|7|8|9|\)|\(|\?'|httpx > "+domain+"/urls_slice.txt")
+    os.system("cat "+domain+"/all_domain-gauplus.txt "+domain+"/katana-tmp.txt |slicepathsurl -l 3|grep -Ev '4|5|6|7|8|9|\)|\(|\?'|httpx > "+domain+"/urls_slice.txt")
 
     if url.startswith("https://"):
         url = url.replace("https://", "", 1)
@@ -33,10 +33,10 @@ for url in lista:
         url = url.replace("http://", "", 1)
 
     #Open Redirect
-    os.system("cat "+domain+"/urls_slice.txt | nuclei -t /root/nuclei-templates/cves/2022/CVE-2022-28923.yaml -t /root/nuclei-templates/vulnerabilities/generic/open-redirect.yaml -c 75 > "+domain+"/openredirect.txt_"+url)
+    #os.system("cat "+domain+"/urls_slice.txt | nuclei -t /root/nuclei-templates/cves/2022/CVE-2022-28923.yaml -t /root/nuclei-templates/vulnerabilities/generic/open-redirect.yaml -c 75 > "+domain+"/openredirect.txt_"+url)
 
     #Git e CRLF Injection
-    os.system("cat "+domain+"/urls_slice.txt | nuclei -tags git,crlf -c 75 > "+domain+"/git-crlf.txt_"+url)
+    #os.system("cat "+domain+"/urls_slice.txt | nuclei -tags git,crlf -c 75 > "+domain+"/git-crlf.txt_"+url)
 
     #Swagger XSS
     os.system("cat "+domain+"/urls_slice.txt | nuclei -t  multiples-swagger-xss-indentify.yaml -c 75 > "+domain+"/swagger-xss.txt_"+url)
