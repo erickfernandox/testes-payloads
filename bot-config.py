@@ -39,4 +39,4 @@ for url in lista:
     #os.system("cat "+domain+"/urls_slice.txt | nuclei -tags git,crlf -c 75 > "+domain+"/git-crlf.txt_"+url)
 
     #Swagger XSS
-    #os.system("cat "+domain+"/urls_slice.txt | nuclei -t  multiples-swagger-xss-indentify.yaml -c 75 > "+domain+"/swagger-xss_"+url)
+    os.system("cat "+domain+"/urls_slice.txt | nuclei -t  multiples-swagger-xss-indentify.yaml -c 75 > "+domain+"/swagger-xss_"+url)
