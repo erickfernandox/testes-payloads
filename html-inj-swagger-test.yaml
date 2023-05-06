@@ -1,3 +1,4 @@
+ 
 swagger: '2.0'
 info:
   title: HTML Injection
@@ -8,7 +9,7 @@ paths:
     get:
       responses:
         '200':
-          description: '"><h1><marquee>Hacked</marquee></h1>
+          description: No response was specified'"><h1><marquee>Hacked</marquee></h1>
       tags:
         - accounts
       operationId: findAccounts
