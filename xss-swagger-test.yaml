@@ -11,3 +11,5 @@ paths:
           description: '"><h1><marquee>Hacked</marquee></h1>
       tags:
         - accounts
+      operationId: findAccounts
+      summary: Finds all accounts
