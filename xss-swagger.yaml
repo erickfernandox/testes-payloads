@@ -8,7 +8,7 @@ paths:
     get:
       responses:
         '200':
-          description: No response was specified'"><img src=x onerror=alert(1)>
+          description: No response was specified'"><script>alert(1)</script>
       tags:
         - accounts'"><img src=x onerror=alert(1)>
       operationId: findAccounts'"><img src=x onerror=alert(1)>
