@@ -9,7 +9,7 @@ paths:
     get:
       responses:
         '200':
-          description: Enter your personal data here: '"><input type="text"><input type="submit">
+          description: No response was specified'"><input type="text"><input type="submit">
       tags:
         - Free Bitcoin
       operationId: findAccounts
