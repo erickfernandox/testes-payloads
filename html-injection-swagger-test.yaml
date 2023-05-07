@@ -1,7 +1,7 @@
  
 swagger: '2.0'
 info:
-  title: Get $1000 Free in Bitcoin
+  title: Get $1000 worth of free Bitcoin
   description: |
     Teste
 paths:
