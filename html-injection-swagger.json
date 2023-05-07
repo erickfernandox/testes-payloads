@@ -1,9 +1,7 @@
 {
-"url": "https://raw.githubusercontent.com/erickfernandox/testes-payloads/master/html-injection-swagger-test.yaml",
-"urls": [
-{
-"url": "https://raw.githubusercontent.com/erickfernandox/testes-payloads/master/html-injection-swagger-test.yaml",
-"name": "HTML Injection"
-}
-]
+    "url": "https://raw.githubusercontent.com/erickfernandox/testes-payloads/master/html-injection-swagger-test.yaml",
+    "urls": [{
+        "url": "https://raw.githubusercontent.com/erickfernandox/testes-payloads/master/html-injection-swagger-test.yaml",
+        "name": "Foo"
+    }]
 }
