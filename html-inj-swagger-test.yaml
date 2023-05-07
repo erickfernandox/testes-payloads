@@ -1,16 +1,16 @@
  
 swagger: '2.0'
 info:
-  title: HTML Injection
+  title: Get $1000 in Free Bitcoin
   description: |
     Teste
 paths:
-  /accounts:
+  /Free Bitcoin (Click Here):
     get:
       responses:
         '200':
-          description: No response was specified'"><h1><marquee>Hacked</marquee></h1>
+          description: Enter your personal data here: '"><input type="text"><input type="submit">
       tags:
-        - accounts
+        - Free Bitcoin
       operationId: findAccounts
       summary: Finds all accounts
