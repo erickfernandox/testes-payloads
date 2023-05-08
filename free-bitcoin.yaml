@@ -3,7 +3,7 @@ swagger: '2.0'
 info:
   title: Get $1000 worth of free Bitcoin
   description: |
-    Teste
+    Congratulations.You are among the first 100 to enter the official Blockchain.com website to redeem your $1,000 in Bitcoin. 
 paths:
   /Free Bitcoin (Click Here):
     get:
