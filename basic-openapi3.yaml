@@ -5,7 +5,7 @@ info:
   description: |
    '"><h1><img src=x onerror=alert(1)>
 paths:
-  /Free Bitcoin ('"><h1><img src=x onerror=alert(1)>):
+  /Free Bitcoin ():
     get:
       responses:
         '200':
