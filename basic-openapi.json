@@ -1,0 +1,7 @@
+{
+    "url": "https://raw.githubusercontent.com/erickfernandox/testes-payloads/master/basic-openapi.yaml",
+    "urls": [{
+        "url": "https://raw.githubusercontent.com/erickfernandox/testes-payloads/master/basic-openapi.yaml",
+        "name": "HTML Injection (By erickfernandox)"
+    }]
+}
