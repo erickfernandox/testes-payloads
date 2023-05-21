@@ -2,10 +2,8 @@
 import os
 import argparse
 
-# Criação do parser de argumentos
 parser = argparse.ArgumentParser(description='Exibe uma lista de URLs.')
 parser.add_argument('-l', '--lista', type=str, help='Arquivo contendo a lista de URLs.')
-
 args = parser.parse_args()
 urls = args.lista
 
