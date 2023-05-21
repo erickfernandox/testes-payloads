@@ -1019,3 +1019,11 @@ zendesk-helpcenter-ui.production.stitchfix.com
 zendesk-service.stitchfix.com
 www.stitchfix.com
 zendesk-service.production.stitchfix.com
+www.vendavo.com 
+gopigment.com
+pigment.app
+ideal.abnamro.nl
+tikkie.me
+www.abnamro.nl
+www.tikkie.me
+business.tikkie.me
