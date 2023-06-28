@@ -15,9 +15,9 @@ payload_xss_5 = "?filter_query=XSS&sort_by=XSS&sort_order=XSS&limit=XSS&offset=X
 
 execucao_xss_1 = "cat "+urls+"| urlfusion '/"+payload_xss_1+"' |airixss -payload '\"XSS' | grep -Ev 'Not'"
 execucao_xss_2 = "cat "+urls+"| urlfusion '/"+payload_xss_2+"' |airixss -payload '\"XSS' | grep -Ev 'Not'"
-execucao_xss_3 = "cat "+urls+"| urlfusion '/"+payload_xss_2+"' |airixss -payload '\"XSS' | grep -Ev 'Not'"
-execucao_xss_4 = "cat "+urls+"| urlfusion '/"+payload_xss_2+"' |airixss -payload '\"XSS' | grep -Ev 'Not'"
-execucao_xss_5 = "cat "+urls+"| urlfusion '/"+payload_xss_2+"' |airixss -payload '\"XSS' | grep -Ev 'Not'"
+execucao_xss_3 = "cat "+urls+"| urlfusion '/"+payload_xss_3+"' |airixss -payload '\"XSS' | grep -Ev 'Not'"
+execucao_xss_4 = "cat "+urls+"| urlfusion '/"+payload_xss_4+"' |airixss -payload '\"XSS' | grep -Ev 'Not'"
+execucao_xss_5 = "cat "+urls+"| urlfusion '/"+payload_xss_5+"' |airixss -payload '\"XSS' | grep -Ev 'Not'"
 
 os.system(execucao_xss_1)
 os.system(execucao_xss_2)
