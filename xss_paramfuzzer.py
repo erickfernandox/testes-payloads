@@ -13,12 +13,14 @@ payload_xss_3 = "?category=XSS&filter=XSS&sort=XSS&order=XSS&limit=XSS&offset=XS
 payload_xss_4 = "?filtro=XSS&campo=XSS&valor=XSS&consulta=XSS&busca=XSS&categoria=XSS&produto=XSS&quantidade=XSS&preco=XSS&promocao=XSS&desconto=XSS&carrinho=XSS&compra=XSS&pedido=XSS&endereco=XSS&cliente=XSS&usuario=XSS&sessao=XSS&token=XSS&chave=XSS&configuracao=XSS&ajuste=XSS&pagina=XSS&exibicao=XSS&filtro_pesquisa=XSS&ordem=XSS&grupo=XSS&marca=XSS&imagem=XSS&banner=XSS&slider=XSS&cor=XSS&tamanho=XSS&estilo=XSS&link_externo=XSS&compartilhar=XSS&feed=XSS&seguir=XSS&curtir=XSS&compartilhamento=XSS&evento=XSS&notificacao=XSS"
 payload_xss_5 = "?filter_query=XSS&sort_by=XSS&sort_order=XSS&limit=XSS&offset=XSS&page_size=XSS&start_page=XSS&end_page=XSS&total_results=XSS&results_per_page=XSS&current_page=XSS&selected_page=XSS&active_tab=XSS&tab_id=XSS&tab_index=XSS&tab_name=XSS&view_mode=XSS&display_mode=XSS&mode=XSS&lang_id=XSS&lang_code=XSS&country_id=XSS&country_code=XSS&currency=XSS&timezone=XSS&date_format=XSS&time_format=XSS&api_key=XSS&api_token=XSS&auth_token=XSS&access_token=XSS&session_id=XSS&session_key=XSS&session_token=XSS&signature=XSS&nonce=XSS"
 
-
-
 execucao_xss_1 = "cat "+urls+"| urlfusion '/"+payload_xss_1+"' |airixss -payload '\"XSS' | grep -Ev 'Not'"
 execucao_xss_2 = "cat "+urls+"| urlfusion '/"+payload_xss_2+"' |airixss -payload '\"XSS' | grep -Ev 'Not'"
 execucao_xss_3 = "cat "+urls+"| urlfusion '/"+payload_xss_2+"' |airixss -payload '\"XSS' | grep -Ev 'Not'"
+execucao_xss_4 = "cat "+urls+"| urlfusion '/"+payload_xss_2+"' |airixss -payload '\"XSS' | grep -Ev 'Not'"
+execucao_xss_5 = "cat "+urls+"| urlfusion '/"+payload_xss_2+"' |airixss -payload '\"XSS' | grep -Ev 'Not'"
 
 os.system(execucao_xss_1)
 os.system(execucao_xss_2)
 os.system(execucao_xss_3)
+os.system(execucao_xss_4)
+os.system(execucao_xss_5)
