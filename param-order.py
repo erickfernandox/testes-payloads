@@ -5,7 +5,7 @@ def format_parameters(lst):
     line = ""
     for item in lst:
         param = f"{item}=FUZZ"
-        if len(param) > 25:
+        if len(param) > 20:
             params.append(line)
             line = ""
         if line:
