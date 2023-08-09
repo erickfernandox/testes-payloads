@@ -26,13 +26,13 @@ def check_double_slash_in_html(url):
         session.mount('http://', adapter)
         session.mount('https://', adapter)
 
-        response = session.get(url, verify=True)  # Habilita a verificação de certificado
+        response = session.get(url, verify=True, allow_redirects=True)
         if response.status_code == 200:
             html_content = response.text
             parsed_url = urlparse(url)
-            sub_url = parsed_url.netloc + parsed_url.path
-            if '="//' + url.split('/')[3] in html_content:
-                return True
+            if(parsed_url.path != ""):
+                if '="' + parsed_url.path in html_content:
+                    return True
     except requests.exceptions.SSLError:
         pass  # Lidar com o erro de SSL
     return False
