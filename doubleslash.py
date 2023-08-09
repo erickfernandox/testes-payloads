@@ -1,4 +1,7 @@
 import argparse
+import requests
+from bs4 import BeautifulSoup
+from urllib.parse import urlparse
 
 def add_double_slash(url):
     # Verifica se a URL já possui duas barras após "https:"
@@ -14,8 +17,25 @@ def add_double_slash(url):
         else:
             return url  # A URL não possui uma suburl após o domínio
     else:
-        return url  # A URL não começa com "https://"
+        return url  # A URL não começa com "https:"
 
+def check_double_slash_in_html(url):
+    try:
+        session = requests.Session()
+        adapter = requests.adapters.HTTPAdapter(max_retries=3)  # Limite de redirecionamentos personalizado
+        session.mount('http://', adapter)
+        session.mount('https://', adapter)
+
+        response = session.get(url, verify=True)  # Habilita a verificação de certificado
+        if response.status_code == 200:
+            html_content = response.text
+            parsed_url = urlparse(url)
+            sub_url = parsed_url.netloc + parsed_url.path
+            if '="//' + sub_url in html_content:
+                return True
+    except requests.exceptions.SSLError:
+        pass  # Lidar com o erro de SSL
+    return False
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Add a double slash to URLs in a text file.")
@@ -28,4 +48,8 @@ if __name__ == "__main__":
     new_urls = [add_double_slash(url.strip()) for url in urls]
 
     for new_url in new_urls:
-        print(new_url)
+        print("Checking:", new_url)
+        if check_double_slash_in_html(new_url):
+            print("\033[32mDouble slash found in HTML!\033[0m")
+        else:
+            print("Double slash not found in HTML.")
