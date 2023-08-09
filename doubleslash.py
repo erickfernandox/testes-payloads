@@ -48,8 +48,7 @@ if __name__ == "__main__":
     new_urls = [add_double_slash(url.strip()) for url in urls]
 
     for new_url in new_urls:
-        print("Checking:", new_url)
         if check_double_slash_in_html(new_url):
-            print("\033[32mDouble slash found in HTML!\033[0m")
+            print("\033[32m[Reflected]",new_url,"\033[0m")
         else:
-            print("Double slash not found in HTML.")
+            print("[Not reflected]",new_url)
