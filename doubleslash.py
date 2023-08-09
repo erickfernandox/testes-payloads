@@ -31,7 +31,7 @@ def check_double_slash_in_html(url):
             html_content = response.text
             parsed_url = urlparse(url)
             sub_url = parsed_url.netloc + parsed_url.path
-            if '="//' + sub_url in html_content:
+            if '="//' + url.split('/')[3] in html_content:
                 return True
     except requests.exceptions.SSLError:
         pass  # Lidar com o erro de SSL
