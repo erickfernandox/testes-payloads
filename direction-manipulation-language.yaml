@@ -77,13 +77,11 @@ http:
     stop-at-first-match: true
     matchers-condition: and
     matchers:
-      - type: regex
-        part: header
-        regex:
+      - type: word
+        part: body
+        words:
           - 'href="//example.com'
           - 'action="//example.com'
-          - 'src="//example.com'
-
       
       - type: status
         status:
