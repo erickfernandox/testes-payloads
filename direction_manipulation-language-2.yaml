@@ -81,7 +81,6 @@ http:
         part: body
         words:
           - 'href="/\example.com'
-          - 'action="/\example.com'
       
       - type: status
         status:
