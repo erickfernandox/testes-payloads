@@ -22,7 +22,7 @@ http:
     path:  
       
       - "{{BaseURL}}/content/?://{{Hostname}}.example.com/"    
-      - "{{BaseURL}}/?://{{Hostname}}.example.com/"          
+      - "{{BaseURL}}/content?://{{Hostname}}.example.com/"                  
 
     stop-at-first-match: true
     matchers-condition: and
