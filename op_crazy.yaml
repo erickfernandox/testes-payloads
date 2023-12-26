@@ -21,7 +21,7 @@ http:
   - method: GET
     path:  
       
-      - "{{BaseURL}}?://{{Hostname}}.example.com/"    
+      - "{{BaseURL}}/content/?://{{Hostname}}.example.com/"    
       - "{{BaseURL}}/?://{{Hostname}}.example.com/"          
 
     stop-at-first-match: true
