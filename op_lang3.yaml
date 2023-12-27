@@ -1,0 +1,54 @@
+id: openredir-language-fuzzer-erickfernandox
+
+info:
+  name: Open Redirect Fuzzer
+  author: erickfernandox
+  severity: medium
+  description: |
+    An open redirect vulnerability was detected. An attacker can redirect a user
+    to a malicious site and possibly obtain sensitive information, modify data, 
+    and/or execute unauthorized operations.
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cwe-id: CWE-601
+  metadata:
+    max-request: 3
+  tags: redirect, generic
+
+# Template para verificar open redirect em vários parâmetros de URL.
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/ar-sa/%5cexample.com"
+      - "{{BaseURL}}/ar-iq/%5cexample.com"
+      - "{{BaseURL}}/ar-eg/%5cexample.com"
+      - "{{BaseURL}}/ar-ly/%5cexample.com"
+      - "{{BaseURL}}/ar/%5cexample.com"
+      - "{{BaseURL}}/zh-tw/%5cexample.com"
+      - "{{BaseURL}}/zh-cn/%5cexample.com"
+      - "{{BaseURL}}/zh-hk/%5cexample.com"
+      - "{{BaseURL}}/zh-sg/%5cexample.com"
+      - "{{BaseURL}}/zh/%5cexample.com"
+      - "{{BaseURL}}/nl/%5cexample.com"
+      - "{{BaseURL}}/nl-be/%5cexample.com"
+
+
+    stop-at-first-match: true
+    matchers-condition: and
+    matchers:
+      - type: regex
+        part: header
+        regex:
+          - '(?m)^(?:Location\s*?:\s*?)(?:https?:\/\/|\/\/|\/\\\\|\/\\)(?:[a-zA-Z0-9\-_\.@]*)example\.com\/?(\/|[^.].*)?$'
+
+      
+      - type: status
+        status:
+          - 301
+          - 302
+          - 307
+          - 308
+          - 303
+          - 306
+        condition: or
