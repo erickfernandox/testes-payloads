@@ -32,14 +32,6 @@ http:
       - "{{BaseURL}}/es-co/%5cexample.com"
       - "{{BaseURL}}/es-ar/%5cexample.com"
       - "{{BaseURL}}/es-cl/%5cexample.com"
-      - "{{BaseURL}}/cn/%5cexample.com"
-      - "{{BaseURL}}/tw/%5cexample.com"
-      - "{{BaseURL}}/vi/%5cexample.com"
-      - "{{BaseURL}}/tr/%5cexample.com"
-      - "{{BaseURL}}/fi/%5cexample.com"
-      - "{{BaseURL}}/da/%5cexample.com"
-      - "{{BaseURL}}/ru/%5cexample.com"
-
 
     stop-at-first-match: true
     matchers-condition: and
