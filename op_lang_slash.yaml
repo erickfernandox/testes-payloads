@@ -36,8 +36,10 @@ http:
       - "{{BaseURL}}/es/es//example.com"
       - "{{BaseURL}}/pt/pt//example.com" 
       - "{{BaseURL}}/nl/nl//example.com"    
+      - "{{BaseURL}}/v1//example.com"    
+      - "{{BaseURL}}/v2//example.com"    
+      - "{{BaseURL}}/v3//example.com"    
       
-
     stop-at-first-match: true
     matchers-condition: and
     matchers:
