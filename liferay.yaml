@@ -1,0 +1,33 @@
+id: lifeeray-xss
+
+info:
+  name: html-reflect-fuzzer
+  author: erickfernandox
+  severity: medium
+  description: |
+    Verifica parametros ocultos que refletem dentro do HTML da pagina
+  classification:
+    cvss-metrics: CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N
+    cvss-score: 6.1
+    cwe-id: CWE-601
+  metadata:
+    max-request: 2
+  tags: fuzzer, generic
+
+http:
+  - method: GET
+    path:
+      - '{{BaseURL}}/o/oauth2/redirect'
+    matchers-condition: and
+    matchers:
+      - type: word
+        part: body
+        words:                    
+          - "Liferay OAuth2 Redirect"                
+
+        condition: and
+
+      - type: word
+        words:
+          - "text/html"
+        part: header
