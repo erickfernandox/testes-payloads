@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #e7f6e7;
+        }
+        .login-container {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .login-container img {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+        .btn-green {
+            background-color: #28a745;
+            color: #ffffff;
+        }
+        .btn-green:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="https://www.leasingmarkt.de/res/v3/image/home/as24-leasingmarkt-endorsement.svg" alt="Login Image">
+        <h2 class="mb-4" style="color: #28a745;">Acessar sua conta</h2>
+        <form>
+            <div class="mb-3">
+                <input type="text" class="form-control" id="username" placeholder="Usuário">
+            </div>
+            <div class="mb-3">
+                <input type="password" class="form-control" id="password" placeholder="Senha">
+            </div>
+            <button type="submit" class="btn btn-green w-100">Entrar</button>
+        </form>
+    </div>
+    
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
