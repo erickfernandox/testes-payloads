@@ -1,0 +1,8 @@
+<request>
+  <query>
+    <market>US</market>
+    <locale>en-US</locale>
+    <origin>LAX</origin>
+    <destination>JFK</destination>
+  </query>
+</request>
